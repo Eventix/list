@@ -36,7 +36,7 @@ func (e *Element) Prev() *Element {
 	return e.prev
 }
 
-func (e *Element) Delete() *Element {
+func (e *Element) Delete() {
 	e.m.RLock()
 	defer e.m.RUnlock()
 
