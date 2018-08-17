@@ -36,6 +36,13 @@ func (e *Element) Prev() *Element {
 	return e.prev
 }
 
+func (e *Element) Delete() *Element {
+	e.m.RLock()
+	defer e.m.RUnlock()
+
+	e.l.Remove(e)
+}
+
 func New() *List {
 	return &List{m : sync.RWMutex{}}
 }
