@@ -384,7 +384,7 @@ func testListOrder(t *testing.T, expected []string, l *List) {
 		}
 	}
 
-	if 0 != at {
+	if at != 0 {
 		t.Errorf("List size differs from actual size backwards; found %d, expected %d; list length %d", len(expected)-at, len(expected), l.Len())
 	}
 }
